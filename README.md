@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://simple-coffee-listing-five-rosy.vercel.app">
+    <a href="https://github-profile-challenge-two.vercel.app">
       Demo
     </a>
     <span> | </span>
