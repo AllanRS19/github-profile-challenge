@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Font Family */
+  --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
+
+  /* Colors */
+  --color-grey-normal: #97A3B6;
+  --color-grey-light: #CDD5E0;
+  --color-dark-blue: #111729;
+  --color-grey-dark: #20293A;
+  --color-grey-darker: #364153;
+  --color-blue-normal: #1D1B48;
+}
+
+@layer base {
+  html, body {
+    @apply relative w-full min-h-screen font-vietnam-pro bg-grey-dark;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@layer components {
+
+  .search-input-container {
+    @apply absolute top-8 left-0 right-0 w-full md:w-[580px] md:mx-auto h-14 px-8;
+  }
+
+  .user-github-section {
+    @apply w-full h-full relative -top-16 p-8 pb-0;
+
+    .user-top-section {
+      @apply size-full flex flex-col md:flex-row gap-4;
+
+      .github-image {
+        @apply relative size-28 rounded-2xl p-2 bg-grey-dark;
+      }
+
+      .user-basic-info {
+        @apply flex flex-row flex-wrap gap-4 md:self-end;
+      }
+    }
+
+    .user-repositories-section {
+      @apply w-full mt-8;
+
+      .user-repositories-grid {
+        @apply w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8;
+      }
+    }
+  }
+
+  .state-container {
+    @apply w-full min-h-[calc(100vh-200px)] flex flex-col justify-center items-center p-10 text-center;
+  }
+}
